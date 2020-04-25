@@ -1,0 +1,18 @@
+version: '2'
+services:
+  coturn:
+    build: .
+    ports:
+      - 3478:3478
+      - 5349:5349
+    environment:
+      - TURN_USERNAME=kurento
+      - TURN_PASSWORD=kurento
+      - REALM=trun.4linesinfotech.com
+      - EXTERNAL_IP=3.7.53.92
+      - NAT=true
+
+
+
+
+

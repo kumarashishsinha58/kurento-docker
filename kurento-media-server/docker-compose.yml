@@ -1,0 +1,20 @@
+version: '2'
+services:
+  kms:
+    build: .
+    ports:
+      - 8888:8888
+    environment:
+#      - KMS_MTU=""
+      - KMS_EXTERNAL_ADDRESS=3.7.53.92
+#      - KMS_NETWORK_INTERFACES=""
+#      - KMS_STUN_IP=turn.4linesinfotech.com
+#      - KMS_STUN_PORT=3478
+      - KMS_TURN_URL=kurento:kurento@15.206.180.229:3478
+#      - KMS_STUN_IP=stun.l.google.com
+#      - KMS_STUN_PORT=19302
+#      - KMS_TURN_URL=stun.l.google.com:19302
+
+
+
+

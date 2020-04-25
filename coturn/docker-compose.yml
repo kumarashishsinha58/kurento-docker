@@ -1,0 +1,16 @@
+version: '2'
+services:
+  coturn:
+    image:zolochevska/turn-server
+    poerts:
+      - 3478:3478
+
+
+#  coturn:
+#    build: .
+#    ports:
+#      - 3478:3478
+
+
+
+
