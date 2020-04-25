@@ -15,7 +15,7 @@ trap on_error ERR
 
 # Settings
 if [[ "${APT_KEEP_CACHE:-}" == "true" ]]; then
-    # Disable the cleaning of apt package cache
+    # Disable the cleaning of Apt package cache
     if [[ -w /etc/apt/apt.conf.d/docker-clean ]]; then
         # Comment out all line(s) that weren't already a comment
         sed --in-place "s|^[^/]|//|" /etc/apt/apt.conf.d/docker-clean
@@ -34,9 +34,9 @@ fi
 
 # Check the environment
 if [[ -d /hostdir ]]; then
-    rm -rf /workdir
-    cp -a /hostdir /workdir
-    cd /workdir
+    rm -rf /build
+    cp -a /hostdir /build
+    cd /build
 fi
 
 # Build packages for current dir
